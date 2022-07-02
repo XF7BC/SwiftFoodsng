@@ -59,3 +59,22 @@ function validateForm3(){
       alert ("Enter your Email address");
   }
 }
+
+
+
+function showPage(panelIndex, color){
+  var buttons= document.querySelectorAll("input.btn");
+ var pages = document.querySelectorAll("div.page");
+
+  buttons.forEach(function(node){
+   node.style.fontWeight='';
+  });
+  buttons[panelIndex].style.backgroundColor=color;
+  pages.forEach(function(node){
+    node.style.display="none"
+  });
+  pages[panelIndex].style.display="flex";
+
+}
+
+showPage(0);
